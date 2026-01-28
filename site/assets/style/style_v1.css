@@ -1,0 +1,900 @@
+/*
+| style desenvolvido por M98 - São Luís - 98991463166
+| Todos os direitos reservados
+*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+
+}
+
+:root {
+    --color-success: #168364;
+    --color-primary: #ddd7a9;
+    --color-success-2: #5ab973;
+    --color-succes-3: #2b5837;
+    --color-succes-4: #7cb084;
+    --color-success-5: #9bd0bf;
+    --color-success-6: #82cb86;
+    --color-success-7: #5e9f8e;
+    --color-success-8: #d7b46c;
+    --color-footer-1: #041611;
+
+
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+    padding-bottom: 10rem;
+}
+
+
+/*itens gerais*/
+h1 {
+    color: var(--color-succes-3);
+}
+
+p {
+    text-align: justify;
+    text-justify: inter-word;
+    word-break: break-word;
+    word-spacing: -0.1rem;
+    hyphens: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.2s, transform 0.5s;
+}
+
+.fade-in.in-view {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.moveLeft {
+    animation: moveLefts 1.3s forwards !important;
+}
+
+.moveLeftSmall {
+    animation: moveLefts 1.8s forwards !important;
+}
+
+.moveVerfyLeftSmall {
+    animation: moveLefts 1.9s forwards !important;
+}
+
+.moveLeftVeryHigsmall {
+    animation: moveLefts 2.0s forwards !important;
+
+}
+
+@keyframes moveLefts {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+/*botão whatsapp*/
+.botao-atendimento {
+    position: fixed;
+    bottom: 90px;
+    right: 0;
+    background-color: #61CE70;
+    padding: 4px 15px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    z-index: 9999;
+    transition: background-color 0.5s ease;
+    cursor: pointer;
+
+}
+
+.botao-atendimento a {
+    font-size: 1.5rem;
+    color: #fff;
+    text-decoration: none;
+
+}
+
+.botao-atendimento a span {
+    font-size: 1rem;
+    color: #fff;
+    margin-left: 5px;
+
+}
+
+.botao-atendimento.oculto {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.4s ease-in, visibility 0s 1s;
+}
+
+.botao-atendimento.no-oculto {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.4s ease-in, visibility 0s;
+}
+
+.breadcrumb-item a {
+    color: var(--color-succes-3);
+}
+
+.cookie-warning {
+    display: none;
+    position: fixed;
+    bottom: 1px;
+    width: 70%;
+    background-color: var(--color-primary);
+    padding: 2rem;
+    border-radius: 30px;
+    z-index: 9999;
+}
+
+.cookie-warning .btn.btn-sm {
+    background-color: var(--color-success-6);
+    width: 10%;
+
+}
+
+.display-block{
+    display: block;
+}
+/*---*/
+.icons-arrow {
+    display: block;
+}
+
+.title-section {
+    color: var(--color-succes-3);
+    font-weight: 600;
+
+}
+
+
+
+
+header .navbar {
+    background-color: var(--color-succes-3);
+}
+
+.navbar .nav-item a {
+    margin: 0 5px;
+}
+
+.navbar .nav-item:hover a {
+    color: var(--color-success);
+    background-color: #ffff;
+}
+
+/**/
+
+#masterheader {
+    background-color: var(--color-succes-3);
+
+}
+
+#masterheader .slick-dots {
+    background-color: var(--color-succes-3);
+}
+
+header .navbar .nav-link {
+    color: #ffff;
+}
+
+#masterheader .slider-banners img {
+    object-fit: cover;
+
+}
+
+#masterheader .slider-banners .cont-img-banner img {
+    display: block;
+
+}
+
+#masterheader .slider-banners.banner-sm .cont-img-banner {
+    display: none !important;
+
+}
+
+/*seção sobre a empresa*/
+@keyframes moveLeftRight {
+    from {
+        transform: translateX(-100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes moveRightLeft {
+    from {
+        transform: translateY(-100%);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+#aboutHome .img-fluid.img-equipe {
+    animation: moveLeftRight 1.6s forwards;
+}
+
+#aboutHome .btn-about.moveBottomTop {
+    animation: moveRightLeft 1.6s forwards;
+}
+
+#aboutHome {
+    padding: 3rem;
+    margin-bottom: 6rem;
+}
+
+#aboutHome .container .row .card-about-empresa .title-section {
+    padding-bottom: 1rem;
+
+}
+
+#aboutHome .container .row .card-about-empresa .title-section .title {
+    color: gray;
+    position: relative;
+    display: flex;
+    align-items: center;
+
+}
+
+#aboutHome .container .row .card-about-empresa .title-section .title .textos {
+    color: gray;
+    padding-top: 1rem;
+
+}
+
+#aboutHome .container .row .card-about-empresa .title-section .title p {
+    color: gray;
+    font-size: 2rem;
+
+}
+
+#aboutHome .container .row .card-about-empresa .title-section .bar-start {
+    background-color: var(--color-success-8);
+    width: 2px;
+    height: 60px;
+    margin-right: 10px;
+}
+
+#aboutHome .container .row .card-about-empresa {
+    color: var(--color-success);
+    border-radius: 10px;
+    padding-top: 2rem;
+
+}
+
+
+#aboutHome .container .row .card-about-empresa .btn {
+    color: var(--color-success-8);
+    font-weight: 700;
+    font-size: 1.4rem;
+    padding: 0;
+    padding-top: 2rem;
+}
+
+#aboutHome .container .row .card-about-empresa .btn:hover {
+    color: var(--color-primary);
+}
+
+/*seção sobre serviços*/
+
+
+#aboutServices .container .title-section h5 {
+    font-size: 1.5rem;
+}
+
+#aboutServices .container .cards {
+    padding-bottom: 3rem;
+    padding-top: 2rem;
+}
+
+#aboutServices .container .card-service {
+
+    border-radius: 5px;
+    padding: 1.5rem;
+    background-color: #ffff;
+    cursor: pointer;
+    height: 200px;
+}
+
+#aboutServices .container .card-service .card-back p {
+    text-align: center !important;
+    color: var(--color-success-7);
+}
+
+#aboutServices .container .card-service h4 {
+    font-weight: 400;
+    color: var(--color-success-7);
+}
+
+/*veiculos sliders*/
+#aboutFrota {
+    margin-bottom: 6rem;
+}
+
+#aboutFrota .container {
+    position: relative;
+}
+
+
+#aboutFrota .prev:hover {
+    background-color: var(--color-succes-4);
+}
+
+#aboutFrota .next:hover {
+    background-color: var(--color-succes-4);
+}
+
+#aboutFrota .title-section p {
+    color: gray;
+    font-size: 0.9rem;
+
+}
+
+#aboutFrota .slider-veiculos .tam-img img {
+    width: 400px;
+    height: 400px;
+    margin: 0 auto;
+
+}
+
+
+#aboutFrota .slider-veiculos .tam-img .info-veiculo {
+    margin-top: 2rem;
+    border-radius: 10px;
+    padding: 1rem 0.5rem;
+    margin: 0 auto;
+
+}
+
+#aboutFrota .container-btn .btn-custom {
+    background-color: var(--color-success-8);
+    color: #ffff;
+}
+
+#aboutFrota .container-btn .btn-custom:hover {
+    background-color: #cea24b;
+
+}
+
+#aboutFrota .slider-veiculos .tam-img .info-veiculo h3 {
+    color: var(--color-succes-3);
+    font-weight: 700px;
+
+}
+
+#aboutFrota .slider-veiculos .tam-img .info-veiculo ul {
+    list-style: none;
+    padding: 0;
+    height: 200px;
+    color: var(--color-succes-3);
+
+
+
+}
+
+
+
+#aboutFrota .prev {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    align-items: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    top: 40%;
+    left: 5rem;
+    font-size: 1.7rem;
+    z-index: 1;
+    transition: transform 0.3s ease;
+    background-color: var(--color-success-6);
+    padding: 10px 10px 10px 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#aboutFrota .next {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    align-items: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    top: 40%;
+    right: 7rem;
+    font-size: 1.7rem;
+    z-index: 1;
+    transition: transform 0.3s ease;
+    background-color: var(--color-success-6);
+    padding: 10px 10px 10px 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+
+/**/
+#aboutContact {
+    margin-bottom: 4rem;
+}
+
+#aboutContact .title-section {
+    color: #ffff;
+
+}
+
+#aboutContact .container {
+    background-image: linear-gradient(to bottom, var(--color-footer-1, 0.5), var(--color-footer-1, 0.3));
+    border-radius: 20px;
+    padding: 1.5rem;
+
+}
+
+#aboutContact .row .cont-circulo {
+    display: flex;
+}
+
+#aboutContact .row .circle-icons {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: var(--color-success);
+    border-radius: 50%;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+#aboutContact .row .circle-icons i {
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    color: #ffff;
+
+}
+
+#aboutContact .row .links a:link {
+    color: #ffff;
+    font-size: 0.9rem;
+    text-decoration: none;
+}
+
+/**/
+/*
+#aboutPontosTuristicos {
+    padding: 2rem;
+    margin-bottom: 0;
+}
+
+#aboutPontosTuristicos .container {
+    position: relative;
+}
+
+#aboutPontosTuristicos .title-section {
+    margin-bottom: 4rem;
+}
+
+#aboutPontosTuristicos .container .slider-turismo .item-slider-turismo {
+    padding-left: 2rem;
+}
+
+#aboutPontosTuristicos .container .slider-turismo .item-slider-turismo img {
+    border-radius: 3rem;
+}
+
+#aboutPontosTuristicos .container .slider-turismo .item-slider-turismo .desc-turismo p {
+    color: var(--color-succes-3);
+    font-weight: 700;
+}
+
+#aboutPontosTuristicos .container .slider-turismo .item-slider-turismo .desc-turismo {
+    text-align: center;
+}
+
+#aboutPontosTuristicos .prev-city {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    align-items: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    top: 40%;
+    left: 4.6rem;
+    font-size: 1.1rem;
+    z-index: 1;
+    transition: transform 0.3s ease;
+    background-color: gray;
+    padding: 10px 10px 10px 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#aboutPontosTuristicos .next-city {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    align-items: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    top: 40%;
+    right: 4.6rem;
+    font-size: 1.1rem;
+    z-index: 1;
+    transition: transform 0.3s ease;
+    background-color: var(--color-success-6);
+    padding: 10px 10px 10px 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+*/
+
+/**/
+footer {
+    flex-shrink: 0;
+    padding: 30px;
+    background-color: var(--color-footer-1);
+
+
+}
+
+footer .container {
+    padding: 2rem;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+footer .footer-up {
+    color: #ffff;
+    font-size: 0.8rem;
+
+}
+
+footer .footer-down {
+    background-color: #404040;
+}
+
+footer .menu-footer .links a {
+    color: #ffff;
+    padding-bottom: 3px;
+    display: block;
+}
+
+#aboutPoliticaPrivacidade {
+    padding-top: 1rem;
+    padding: 2rem;
+}
+
+#aboutPoliticaPrivacidade h1 {
+    margin-bottom: 3rem;
+    padding: 2rem;
+    text-align: center;
+    text-justify: inter-word;
+    word-break: break-word;
+    word-spacing: normal;
+    hyphens: auto;
+    font-size: 1.4rem;
+    color: var(--color-succes-3);
+}
+
+#aboutPoliticaPrivacidade h2 {
+    font-size: 1.3rem;
+    color: var(--color-succes-3);
+}
+
+#aboutPoliticaPrivacidade h3 {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    color: var(--color-succes-3);
+
+}
+
+#aboutPoliticaPrivacidade ul {
+    margin-bottom: 2rem;
+
+}
+
+#aboutEmpresa ul li {
+    list-style: none;
+    padding: 0;
+}
+
+#aboutEmpresa h2 {
+    color: var(--color-succes-3);
+}
+
+#aboutEmpresa h3 {
+    color: var(--color-succes-3);
+}
+
+#aboutEmpresa ul li i {
+    padding-right: 0.7rem;
+    padding-bottom: 0.7rem;
+    color: var(--color-succes-3);
+}
+
+#pageServices ul li {
+    list-style: none;
+    padding: 0;
+    font-size: 1.6rem;
+}
+
+#pageServices ul li i {
+    padding: 0.9rem;
+    color: var(--color-success-8);
+}
+
+#pageServices {
+    margin-bottom: 4rem;
+}
+
+#pageServices .title-section {
+    color: #ffff;
+
+}
+
+#pageServices .container.card-contato {
+    background-image: linear-gradient(to bottom, var(--color-footer-1, 0.5), var(--color-footer-1, 0.3));
+    border-radius: 20px;
+    padding: 1.5rem;
+
+}
+
+#pageServices .container.card-contato .row .cont-circulo {
+    display: flex;
+}
+
+#pageServices .container.card-contato .row .circle-icons {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-success);
+    border-radius: 50%;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+#pageServices .container.card-contato .row .circle-icons i {
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    color: #ffff;
+
+}
+
+#pageServices .container.card-contato .row .links a:link {
+    color: #ffff;
+    font-size: 0.9rem;
+    text-decoration: none;
+}
+#pageServices .services .bg-service-car{
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/Fotos-15152.jpg") ;
+    background-size: cover;
+    background-position: center;
+}
+#aboutNossaFrota {
+    margin-bottom: 6rem;
+}
+
+#aboutNossaFrota .container {
+    position: relative;
+}
+
+
+#aboutNossaFrota .prev:hover {
+    background-color: var(--color-succes-4);
+}
+
+#aboutNossaFrota .next:hover {
+    background-color: var(--color-succes-4);
+}
+
+#aboutNossaFrota .title-section p {
+    color: gray;
+    font-size: 0.9rem;
+
+}
+
+#aboutNossaFrota .slider-veiculos .tam-img img {
+    width: 400px;
+    height: 400px;
+    margin: 0 auto;
+
+}
+
+
+#aboutNossaFrota .slider-veiculos .tam-img .info-veiculo {
+    margin-top: 2rem;
+    border-radius: 10px;
+    padding: 1rem 0.5rem;
+    margin: 0 auto;
+
+}
+
+#aboutNossaFrota .container-btn .btn-custom {
+    background-color: var(--color-success-8);
+    color: #ffff;
+}
+
+#aboutNossaFrota .container-btn .btn-custom:hover {
+    background-color: #cea24b;
+
+}
+
+#aboutNossaFrota .slider-veiculos .tam-img .info-veiculo h3 {
+    color: var(--color-succes-3);
+    font-weight: 700px;
+
+}
+
+#aboutNossaFrota .slider-veiculos .tam-img .info-veiculo ul {
+    list-style: none;
+    padding: 0;
+    height: 200px;
+    color: var(--color-succes-3);
+
+
+
+}
+
+
+
+#aboutNossaFrota .prev {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    align-items: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    top: 40%;
+    left: 5rem;
+    font-size: 1.7rem;
+    z-index: 1;
+    transition: transform 0.3s ease;
+    background-color: var(--color-success-6);
+    padding: 10px 10px 10px 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#aboutNossaFrota .next {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    align-items: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    top: 40%;
+    right: 7rem;
+    font-size: 1.7rem;
+    z-index: 1;
+    transition: transform 0.3s ease;
+    background-color: var(--color-success-6);
+    padding: 10px 10px 10px 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#contatoPage a {
+    text-decoration: none;
+    color: var(--color-succes-3);
+}
+
+#contatoPage .row .circle-icons {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-success);
+    border-radius: 50%;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+#contatoPage .row .circle-icons i {
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    color: #ffff;
+
+}
+
+#aboutContact .row .links a:link {
+    color: #ffff;
+    font-size: 0.9rem;
+    text-decoration: none;
+}
+
+@media (max-width:991px) {
+    .icons-arrow {
+        display: none;
+    }
+
+    #aboutHome {
+        padding: 0;
+    }
+
+    #aboutServices .container .cards {
+        padding: 0;
+
+    }
+
+    #aboutServices .container .cards .card-service {
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    #aboutContact .container {
+        padding: 0;
+
+    }
+
+    #aboutContact .row .cont-circulo {
+        display: block;
+    }
+
+    .cookie-warning {
+        bottom: 0;
+        width: 100%;
+    }
+
+    footer {
+        background-color: var(--color-footer-1);
+        padding: 0;
+    }
+
+    #pageServices ul li {
+        list-style: none;
+        padding: 0;
+        font-size: 1.1rem;
+        
+    }
+    #pageServices .container.card-contato .row .cont-circulo {
+        display: block;
+    }
+}
